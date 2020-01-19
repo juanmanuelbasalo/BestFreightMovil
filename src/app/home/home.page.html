@@ -1,14 +1,27 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      BuscoMejorFlete
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <img src="../assets/img/logo.jpeg" style='width:100%;'/>
+    <ion-row style="height: 50px"></ion-row>
+    <ion-list>
+      <ion-item>
+        <ion-label>Seleccione su País:</ion-label>
+        <ion-select [(ngModel)]="pais" (ngModelChange)="func(pais)" value="null" okText="Okay" cancelText="Cancelar">
+          <ion-select-option *ngFor="let item of paises.paises_bfs" value="{{item.id_p_bfs}}">{{item.pais_bfs}}</ion-select-option>
+        </ion-select>
+      </ion-item>   
+    </ion-list>
+    <ion-row style="height: 10px"></ion-row>
+    <ion-button expand="block" [disabled]="disableBtn" routerLink="/fletes" routerDirection="root">
+      Buscar
+    </ion-button>
+    <ion-label style="color: black;">Cotizaciones: {{ cotizaciones }}</ion-label>
   </div>
 </ion-content>

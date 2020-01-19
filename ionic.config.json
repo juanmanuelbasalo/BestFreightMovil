@@ -1,5 +1,8 @@
 {
   "name": "BestFright",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
