@@ -7,12 +7,12 @@ export class Freight {
   public tel: string;
   public pais: string;
   public servicio: string;
-  public id_pais_origen: string;
-  public id_region_origen: string;
+  public id_pais_origen: number;
+  public id_region_origen: number;
   public ciudad_orig: string;
   public fecha_salida: string;
-  public id_pais_dest: string;
-  public id_region_destino: string;
+  public id_pais_dest: number;
+  public id_region_destino: number;
   public ciudad_dest: string;
   public fecha_llegada: string;
   public recep: string;
@@ -23,7 +23,7 @@ export class Freight {
   public serv_truck: string;
   public serv_temp: string;
   public serv_insp: string;
-  public size_cont: string;
+  public size_cont: number;
   public cant_cont: string;
   public peso_cont: string;
   public comentario: string;
@@ -39,12 +39,12 @@ export class Freight {
     flete.tel = this.checkForNullOrUndefined(form.value.tel);
     flete.pais = this.checkForNullOrUndefined(form.value.pais);
     flete.servicio = this.checkForNullOrUndefined(type);
-    flete.id_pais_origen = this.checkForNullOrUndefined(form.value.id_pais_origen);
-    flete.id_region_origen = this.checkForNullOrUndefined(form.value.id_region_origen);
+    flete.id_pais_origen = Number(this.checkForNullOrUndefined(form.value.id_pais_origen));
+    flete.id_region_origen = Number(this.checkForNullOrUndefined(form.value.id_region_origen));
     flete.ciudad_orig = this.checkForNullOrUndefined(form.value.ciudad_orig);
     flete.fecha_salida = this.checkForNullOrUndefined(form.value.fecha_salida).split('T')[0];
-    flete.id_pais_dest = this.checkForNullOrUndefined(form.value.id_pais_dest);
-    flete.id_region_destino = this.checkForNullOrUndefined(form.value.id_region_destino);
+    flete.id_pais_dest = Number(this.checkForNullOrUndefined(form.value.id_pais_dest));
+    flete.id_region_destino = Number(this.checkForNullOrUndefined(form.value.id_region_destino));
     flete.ciudad_dest = this.checkForNullOrUndefined(form.value.ciudad_dest);
     flete.fecha_llegada = this.checkForNullOrUndefined(form.value.fecha_llegada).split('T')[0];
     flete.recep = this.checkForNullOrUndefined(form.value.recepcion);
@@ -74,7 +74,8 @@ export class Freight {
       flete.serv_insp = 'Cargo Inspection';
     }
 
-    flete.size_cont = this.checkForNullOrUndefined((form.value.size_cont)).split(' ')[0];
+    // tslint:disable-next-line: max-line-length
+    flete.size_cont = ((this.checkForNullOrUndefined((form.value.size_cont)).split(' ')[0]) === '' ? 0 : Number(this.checkForNullOrUndefined((form.value.size_cont)).split(' ')[0]));
     flete.cant_cont = this.checkForNullOrUndefined(form.value.cant_cont);
     flete.peso_cont = this.checkForNullOrUndefined(form.value.peso_cont);
     flete.comentario = this.checkForNullOrUndefined(form.value.comentario);

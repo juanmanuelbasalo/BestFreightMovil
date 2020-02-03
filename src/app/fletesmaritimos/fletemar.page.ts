@@ -38,7 +38,7 @@ constructor(public apiService: ApiService, public alertController: AlertControll
 changeModule(myFlag: number) {
   this.myFlag = myFlag;
   if (myFlag === 1) { this.type = 'container'; this.nombre = 'Contenedor LLeno - FCL'; }
-  if (myFlag === 2) { this.type = 'carga_suela'; this.nombre = 'Carga Suelta-Mudanzas-Vehículos'; }
+  if (myFlag === 2) { this.type = 'carga_suelta'; this.nombre = 'Carga Suelta-Mudanzas-Vehículos'; }
   if (myFlag === 3) { this.type = 'carga_proyecto'; this.nombre = 'Carga Suelta de Proyecto'; }
 }
 
