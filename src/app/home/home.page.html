@@ -8,7 +8,9 @@
 
 <ion-content>
   <div class="ion-padding">
-    <img src="../assets/img/logo.jpeg" style='width:100%;'/>
+    <img id="boxshadow" src="../assets/img/logo.jpeg" style='width:100%;'/>
+    <ion-row style="height: 50px"></ion-row>
+    <p class="marquee"><span><b>{{ horizontalText }}</b></span></p>
     <ion-row style="height: 50px"></ion-row>
     <ion-list>
       <ion-item>
@@ -23,5 +25,7 @@
       Buscar
     </ion-button>
     <ion-label style="color: black;">Cotizaciones: {{ cotizaciones }}</ion-label>
+    <ion-row style="height: 50px"></ion-row>
+    <p class="marquee"><span><b>{{ horizontalText }}</b></span></p>
   </div>
 </ion-content>

@@ -35,8 +35,10 @@
                     <div class="col-xs-12 col-sm-4"><label>Correo</label><input class="form-control" required="" ngModel name="correo" type="email"></div>
                     <div padding>
                     <ion-list>
+                      <ion-item>
+                        <ion-label>País de cotizacion:</ion-label>
+                      </ion-item>
                         <ion-item>
-                          <ion-label>País de cotizacion:</ion-label>
                           <ion-select placeholder="Seleccionar" class="form-control" ngModel name="pais"
                             required="required">
                             <ion-select-option value="Argentina">Argentina</ion-select-option>
@@ -104,7 +106,7 @@
                         </ion-select>
                         </ion-item>   
                       </ion-list></div>
-                    <div class="col-xs-12 col-sm-4"><label>Ciudad de recepcion</label><ion-input class="form-control" ngModel name="ciudad_orig" type="text" value="333"></ion-input></div>
+                    <div class="col-xs-12 col-sm-4"><label>Lugar de recepcion</label><ion-input class="form-control" ngModel name="ciudad_orig" type="text" value=""></ion-input></div>
                     <div class="col-xs-12 col-sm-4"><label>Recepción</label>
                         <ion-list>
                             <ion-item>
@@ -145,7 +147,7 @@
                          </ion-select>
                         </ion-item>   
                       </ion-list></div>
-                    <div class="col-xs-12 col-sm-4"><label>Ciudad Destino</label><ion-input class="form-control" required="" ngModel name="ciudad_dest" type="text"></ion-input></div> 
+                    <div class="col-xs-12 col-sm-4"><label>Lugar de Destino</label><ion-input class="form-control" required="" ngModel name="ciudad_dest" type="text"></ion-input></div> 
                     <div class="col-xs-12 col-sm-4"><label>Fecha Llegada</label><ion-item>
                   
                         <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_llegada" placeholder="Fecha Llegada"></ion-datetime>
@@ -312,7 +314,7 @@
              <div class="row-fluid">
                         <div class="col-xs-12 col-sm-12 col-md-12"><br>
                             <div><label>Instrucciones Especiales: </label><textarea rows="4" ngModel name="comentario" class="form-control"></textarea></div> <br>                                            
-                            <div><label>Adjuntar información adicional: </label><div style="color:#e41717"> Nota: Si son 2 o más contenedores de diferente tipo (ejemplo: uno de 20 y uno de 40) debe adjuntar un archivo con los detalles. </div><input class="form-control" ngModel name="adjunto" id="adjunto" type="file"></div>
+                            <div><label>Adjuntar información adicional: </label><div style="color:#e41717"> Nota: adjuntar listado individual de piezas o bultos con las medidas de largo, ancho y profundidad y peso de cada una. </div><input class="form-control" ngModel name="adjunto" id="adjunto" type="file"></div>
                         </div>                                            
              </div>                   
     </div>

@@ -91,14 +91,14 @@
               class="form-control"></textarea></div><br>
               <div class="col-xs-12 col-sm-4"><label>País de recepcion</label><ion-list>
                 <ion-item>
-                  <ion-label>Origen</ion-label>
+                  <ion-label>Pais</ion-label>
                   <ion-select placeholder="Seleccionar" class="form-control" ngModel name="id_pais_origen"
                     required="required">
                     <ion-select-option *ngFor="let item of paises" value="{{item.id_pais}}">{{item.pais}}</ion-select-option>
                 </ion-select>
                 </ion-item>   
               </ion-list></div>
-          <div class="col-xs-12 col-sm-4"><label>Ciudad de Recepcion</label><input class="form-control"
+          <div class="col-xs-12 col-sm-4"><label>Lugar de Recepcion</label><input class="form-control"
               required="" ngModel name="ciudad_orig" type="text"></div>
               <div class="col-xs-12 col-sm-4"><label>Recepción</label>
                 <ion-list>
@@ -111,7 +111,7 @@
                     </ion-item>   
                   </ion-list>
             </div>
-            <div class="col-xs-12 col-sm-4"><label>Fecha Salida</label><ion-item>
+            <div class="col-xs-12 col-sm-4"><ion-item>
               <ion-label>Fecha Salida</ion-label>
               <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_salida" placeholder="Fecha Salida"></ion-datetime>
             </ion-item></div>
@@ -127,19 +127,18 @@
 
               <div class="col-xs-12 col-sm-4"><label>País Destino</label><ion-list>
                 <ion-item>
-                  <ion-label>País Destino</ion-label>
                   <ion-select placeholder="Seleccionar" class="form-control" ngModel name="id_pais_dest"
                     required="required">
                     <ion-select-option *ngFor="let item of paisesDestino" value="{{item.id_pais}}">{{item.pais}}</ion-select-option>
                  </ion-select>
                 </ion-item>   
               </ion-list></div>
-          <div class="col-xs-12 col-sm-4"><label>Ciudad Destino</label><input class="form-control"
+          <div class="col-xs-12 col-sm-4"><label>Lugar Destino</label><input class="form-control"
               required="" ngModel name="ciudad_dest" type="text"></div>
           <div class="col-xs-12 col-sm-4"><label>Fecha Llegada</label>
               <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_llegada" placeholder="Fecha Llegada"></ion-datetime> </div>
 
-          <div class="col-xs-12 col-sm-4"><label>Entrega</label>
+          <div class="col-xs-12 col-sm-4">
             <ion-list>
               <ion-item>
                 <ion-label>Entrega</ion-label>
@@ -235,7 +234,7 @@
                 <ion-select-option value="45">45 HC</ion-select-option>
                 </ion-select>
             </div>
-            <div class="col-xs-12 col-sm-4"><label>Incoterm</label>
+            <div class="col-xs-12 col-sm-4">
               <ion-list>
                 <ion-item>
                   <ion-label>Incoterm</ion-label>
@@ -277,11 +276,11 @@
       </div>
       <div *ngIf="myFlag == 2">
         <div class="col-xs-12 col-sm-12 col-md-12"><br>
-          <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>Datos de la Carga / Cargo Information</strong></h4><br>
-                                    <div class="col-xs-12 col-sm-4"><label>Cantidad (bultos) / Quantity (pieces)</label><input class="form-control" required="" ngModel name="cant_cont" min="1" value="1" type="number"></div> 
-                                    <div class="col-xs-12 col-sm-4"><label>Peso (Kgs) / Weight (Kgs)</label><input class="form-control" required="" ngModel name="peso_cont" step="0.1" min="0.0" value="0.0" type="number"></div> 
-                                    <div class="col-xs-12 col-sm-4"><label>Metros Cúbicos / Cubic Meters</label><input class="form-control" required="" ngModel name="cubic" step="0.1" min="0.0" value="0.0" type="number"></div> 
-                                    <div class="col-xs-12 col-sm-4"><label>Incoterm</label> 
+          <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>Datos de la Carga</strong></h4><br>
+                                    <div class="col-xs-12 col-sm-4"><label>Cantidad (bultos)</label><input class="form-control" required="" ngModel name="cant_cont" min="1" value="1" type="number"></div> 
+                                    <div class="col-xs-12 col-sm-4"><label>Peso (Kgs)</label><input class="form-control" required="" ngModel name="peso_cont" step="0.1" min="0.0" value="0.0" type="number"></div> 
+                                    <div class="col-xs-12 col-sm-4"><label>Metros Cúbicos</label><input class="form-control" required="" ngModel name="cubic" step="0.1" min="0.0" value="0.0" type="number"></div> 
+                                    <div class="col-xs-12 col-sm-4">
                                       <ion-list>
                                         <ion-item>
                                           <ion-label>Incoterm</ion-label>
