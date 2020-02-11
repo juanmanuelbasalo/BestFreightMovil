@@ -6,6 +6,7 @@ import { retry } from 'rxjs/operators';
 import { ApiService } from '../services/api.service';
 import { Freight } from '../Modelos/Freight';
 import { AlertController } from '@ionic/angular';
+import { TranslateConfigService } from '../services/translateConfig.service';
 
 @Component({
   selector: 'app-flete',
@@ -17,24 +18,40 @@ public myFlag: number = 1;
 public data: Freight;
 public type: string;
 public nombre: String;
-
+private language: string;
 paises: any;
 paisesDestino: any;
+public checks = [
+  { val: 'Pepperoni', isChecked: false },
+  { val: 'Sausage', isChecked: false },
+  { val: 'Mushroom', isChecked: false },
+  { val: 'Pepperoni', isChecked: false },
+  { val: 'Sausage', isChecked: false },
+  { val: 'Mushroom', isChecked: false }
+];
 
-  constructor(public apiService: ApiService, public alertController: AlertController) {
+  constructor(public apiService: ApiService, public alertController: AlertController,
+              private translateConfigService: TranslateConfigService) {
     this.data = new Freight();
     this.type = 'terrestre_cont';
     this.paises = [];
     this.paisesDestino = [];
     this.getAllCountries();
     this.getAllCountriesDestino();
-    this.nombre = 'Flete Terrestre';
+    this.language = translateConfigService.getCurrentLanguage();
+    this.nombre = (this.language.includes('es')) ? 'Flete Terrestre' : 'Land Freight';
   }
 
   changeModule(myFlag: number) {
     this.myFlag = myFlag;
-    if (myFlag === 1) { this.type = 'terrestre_cont'; this.nombre = 'Contenedor lleno - FCL'; }
-    if (myFlag === 2) { this.type = 'terrestre_suelta'; this.nombre = 'Carga suelta - Mudanzas'; }
+    if (myFlag === 1) {
+      this.type = 'terrestre_cont';
+      this.nombre = (this.language.includes('es')) ? 'Contenedor lleno - FCL' : 'Full Containern- FCL';
+    }
+    if (myFlag === 2) {
+      this.type = 'terrestre_suelta';
+      this.nombre = (this.language.includes('es')) ? 'Carga suelta - Mudanzas' : 'Loose cargo';
+    }
   }
 
   async onSubmit(form: NgForm) {
@@ -44,8 +61,8 @@ paisesDestino: any;
       console.log(response);
     });
     const alert = await this.alertController.create({
-      header: 'Exito!',
-      message: 'Se envio su cotizacion con exito.',
+      header: (this.language.includes('es')) ? 'Exito!' : 'Sent',
+      message: (this.language.includes('es')) ? 'Se envio su cotizacion con exito, verifique confirmación en su email.' : 'Verify your email for confirmation.',
       buttons: ['OK']
     });
     await alert.present();

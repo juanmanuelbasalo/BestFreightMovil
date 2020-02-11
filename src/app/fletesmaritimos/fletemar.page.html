@@ -172,7 +172,7 @@
                   <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                       <ion-item>
                               <ion-label>{{ 'SEA.insurrance' | translate }}</ion-label>
-                              <ion-checkbox color="dark" ngModel name="serv_seguro" value="Inssurance">
+                              <ion-checkbox color="dark" [(ngModel)]="checks[0].isChecked" name="serv_seguro" value="Inssurance">
                               </ion-checkbox>
                       </ion-item>
                          
@@ -180,7 +180,7 @@
                   <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                       <ion-item>
                               <ion-label>{{ 'SEA.bonded_warehouse' | translate }}</ion-label>
-                              <ion-checkbox color="dark" ngModel name="serv_bonded" value="Bonded Warehouse">
+                              <ion-checkbox color="dark" [(ngModel)]="checks[1].isChecked" name="serv_bonded" value="Bonded Warehouse">
                                       </ion-checkbox>
                       </ion-item>
                          
@@ -188,7 +188,7 @@
                   <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                       <ion-item>
                               <ion-label>{{ 'SEA.customs_clearence' | translate }}</ion-label>
-                              <ion-checkbox color="dark" type="checkbox" ngModel name="serv_aduana" value="Customs Cleareance">
+                              <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[2].isChecked" name="serv_aduana" value="Customs Cleareance">
                                </ion-checkbox>
                       </ion-item>
                           
@@ -196,7 +196,7 @@
                   <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                       <ion-item>
                               <ion-label>{{ 'SEA.land_transp' | translate }}</ion-label>
-                              <ion-checkbox color="dark" type="checkbox" ngModel name="serv_truck" value="Land Transportation">
+                              <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[3].isChecked" name="serv_truck" value="Land Transportation">
                               </ion-checkbox>
                       </ion-item>
                          
@@ -204,7 +204,7 @@
                   <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                       <ion-item>
                               <ion-label>{{ 'SEA.temp_control' | translate }}</ion-label>
-                              <ion-checkbox color="dark" type="checkbox" ngModel name="serv_temp" value="Controled Temp">
+                              <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[4].isChecked" name="serv_temp" value="Controled Temp">
                               </ion-checkbox>
                       </ion-item>
                          
@@ -212,7 +212,7 @@
                   <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                       <ion-item>
                               <ion-label>{{ 'SEA.cargo_inspection' | translate }}</ion-label>
-                              <ion-checkbox color="dark" ngModel name="serv_insp" value="Cargo Inspection">
+                              <ion-checkbox color="dark" [(ngModel)]="checks[5].isChecked" name="serv_insp" value="Cargo Inspection">
                               </ion-checkbox>
                       </ion-item>
                          

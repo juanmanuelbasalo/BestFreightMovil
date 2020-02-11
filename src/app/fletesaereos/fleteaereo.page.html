@@ -150,7 +150,7 @@
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
                                         <ion-label>{{ 'AIR.insurrance' | translate }}</ion-label>
-                                        <ion-checkbox color="dark" ngModel name="serv_seguro" value="Seguro / Issurance">
+                                        <ion-checkbox color="dark" [(ngModel)]="checks[0].isChecked" name="serv_seguro" value="Seguro / Issurance">
                                         </ion-checkbox>
                                 </ion-item>
                                    
@@ -158,7 +158,7 @@
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
                                         <ion-label> {{ 'AIR.bonded_warehouse' | translate }}</ion-label>
-                                        <ion-checkbox color="dark" ngModel name="serv_bonded" value="Bodega Aduanera / Bonded Warehouse">
+                                        <ion-checkbox color="dark" [(ngModel)]="checks[1].isChecked" name="serv_bonded" value="Bodega Aduanera / Bonded Warehouse">
                                                 </ion-checkbox>
                                 </ion-item>
                                    
@@ -166,7 +166,7 @@
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
                                         <ion-label>{{ 'AIR.customs_clearence' | translate }}</ion-label>
-                                        <ion-checkbox color="dark" type="checkbox" ngModel name="serv_aduana" value="Corretaje de Aduanas / Customs Cleareance">
+                                        <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[2].isChecked" name="serv_aduana" value="Corretaje de Aduanas / Customs Cleareance">
                                          </ion-checkbox>
                                 </ion-item>
                                     
@@ -174,7 +174,7 @@
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
                                         <ion-label>{{ 'AIR.land_transp' | translate }}</ion-label>
-                                        <ion-checkbox color="dark" type="checkbox" ngModel name="serv_truck" value="Transporte Terrestre / Land Transportation">
+                                        <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[3].isChecked" name="serv_truck" value="Transporte Terrestre / Land Transportation">
                                         </ion-checkbox>
                                 </ion-item>
                                    
@@ -182,7 +182,7 @@
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
                                         <ion-label>{{ 'AIR.temp_control' | translate }}</ion-label>
-                                        <ion-checkbox color="dark" type="checkbox" ngModel name="serv_temp" value="Control de Temp / Controled Temp">
+                                        <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[4].isChecked" name="serv_temp" value="Control de Temp / Controled Temp">
                                         </ion-checkbox>
                                 </ion-item>
                                    
@@ -190,7 +190,7 @@
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
                                         <ion-label>{{ 'AIR.cargo_inspection' | translate }}</ion-label>
-                                        <ion-checkbox color="dark" ngModel name="serv_insp" value="Inspección de Carga / Cargo Inspection">
+                                        <ion-checkbox color="dark" [(ngModel)]="checks[5].isChecked" name="serv_insp" value="Inspección de Carga / Cargo Inspection">
                                         </ion-checkbox>
                                 </ion-item>
                                    

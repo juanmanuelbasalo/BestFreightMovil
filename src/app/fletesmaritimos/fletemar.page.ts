@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Freight } from '../Modelos/Freight';
 import { ApiService } from '../services/api.service';
 import { AlertController } from '@ionic/angular';
+import { TranslateConfigService } from '../services/translateConfig.service';
 
 @Component({
   selector: 'app-flete',
@@ -17,12 +18,21 @@ regions: any;
 paises: any;
 reg: any;
 type: string;
-
+language: string;
 regionsDestino: any;
 paisesDestino: any;
 regDestino: any;
+public checks = [
+  { val: 'Pepperoni', isChecked: false },
+  { val: 'Sausage', isChecked: false },
+  { val: 'Mushroom', isChecked: false },
+  { val: 'Pepperoni', isChecked: false },
+  { val: 'Sausage', isChecked: false },
+  { val: 'Mushroom', isChecked: false }
+];
 
-constructor(public apiService: ApiService, public alertController: AlertController) {
+constructor(public apiService: ApiService, public alertController: AlertController,
+            private translateConfigService: TranslateConfigService) {
   this.data = new Freight();
   this.regions = [];
   this.paises = [];
@@ -32,14 +42,24 @@ constructor(public apiService: ApiService, public alertController: AlertControll
   this.getAllRegions();
   this.getAllRegionsDestino();
   this.type = 'container';
-  this.nombre = 'Flete Maritimo';
+  this.language = translateConfigService.getCurrentLanguage();
+  this.nombre = (this.language.includes('es')) ? 'Flete Maritimo' : 'Sea Freight';
 }
 
 changeModule(myFlag: number) {
   this.myFlag = myFlag;
-  if (myFlag === 1) { this.type = 'container'; this.nombre = 'Contenedor LLeno - FCL'; }
-  if (myFlag === 2) { this.type = 'carga_suelta'; this.nombre = 'Carga Suelta-Mudanzas-Vehículos'; }
-  if (myFlag === 3) { this.type = 'carga_proyecto'; this.nombre = 'Carga Suelta de Proyecto'; }
+  if (myFlag === 1) {
+    this.type = 'container';
+    this.nombre = (this.language.includes('es')) ? 'Contenedor LLeno - FCL' : 'Full Container - FCL';
+  }
+  if (myFlag === 2) {
+    this.type = 'carga_suelta';
+    this.nombre = (this.language.includes('es')) ? 'Carga Suelta-Mudanzas-Vehículos' : 'Loose cargo Effects-Vehicles';
+  }
+  if (myFlag === 3) {
+    this.type = 'carga_proyecto';
+    this.nombre = (this.language.includes('es')) ? 'Carga Suelta de Proyecto' : 'Project cargo';
+  }
 }
 
 async onSubmit(form: NgForm) {
@@ -49,8 +69,8 @@ async onSubmit(form: NgForm) {
     console.log(response);
   });
   const alert = await this.alertController.create({
-    header: 'Exito!',
-    message: 'Se envio su cotizacion con exito y una confimacion a su email.',
+    header: (this.language.includes('es')) ? 'Exito!' : 'Sent',
+    message: (this.language.includes('es')) ? 'Se envio su cotizacion con exito, verifique confirmación en su email.' : 'Verify your email for confirmation.',
     buttons: ['OK']
   });
   await alert.present();
