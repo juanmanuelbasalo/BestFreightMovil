@@ -1,20 +1,31 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>
-      BuscoMejorFlete
+      {{ 'HOME.title' | translate }} 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
+    <ion-row style="height: 30px"></ion-row>
     <img id="boxshadow" src="../assets/img/logo.jpeg" style='width:100%;'/>
-    <ion-row style="height: 50px"></ion-row>
-    <p class="marquee"><span><b>{{ horizontalText }}</b></span></p>
-    <ion-row style="height: 50px"></ion-row>
+    <ion-row style="height: 40px;"></ion-row>
     <ion-list>
       <ion-item>
-        <ion-label>Seleccione su País:</ion-label>
+        <ion-label>Select Language</ion-label>
+        <ion-select placeholder="Select One" [(ngModel)]="selectedLanguage" (ionChange)="languageChanged()">
+          <ion-select-option value="en">English</ion-select-option>
+          <ion-select-option value="es">Spanish</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-row style="height: 40px"></ion-row>
+    <p class="marquee"><span><b>{{ horizontalText }}</b></span></p>
+    <ion-row style="height: 20px"></ion-row>
+    <ion-list>
+      <ion-item>
+        <ion-label>{{ 'HOME.select_country' | translate }}</ion-label>
         <ion-select [(ngModel)]="pais" (ngModelChange)="func(pais)" value="null" okText="Okay" cancelText="Cancelar">
           <ion-select-option *ngFor="let item of paises.paises_bfs" value="{{item.id_p_bfs}}">{{item.pais_bfs}}</ion-select-option>
         </ion-select>
@@ -22,10 +33,10 @@
     </ion-list>
     <ion-row style="height: 10px"></ion-row>
     <ion-button expand="block" [disabled]="disableBtn" routerLink="/fletes" routerDirection="root">
-      Buscar
+      {{ 'HOME.find' | translate }} 
     </ion-button>
-    <ion-label style="color: black;">Cotizaciones: {{ cotizaciones }}</ion-label>
-    <ion-row style="height: 50px"></ion-row>
-    <p class="marquee"><span><b>{{ horizontalText }}</b></span></p>
+    <ion-label style="color: black;">{{ 'HOME.Quotes' | translate }} {{ cotizaciones }}</ion-label>
+    <ion-row style="height: 20px"></ion-row>
+    <p class="marquee"><span><b>{{ horizontalText }}</b></span></p>    
   </div>
 </ion-content>

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
 import { HomePage } from './home.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    TranslateModule.forChild(),
   ],
   declarations: [HomePage]
 })

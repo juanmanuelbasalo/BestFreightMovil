@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { ApiService } from '../services/api.service';
+import { TranslateConfigService } from '../services/translateConfig.service';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +13,11 @@ export class HomePage {
   pais = '';
   paises: any;
   horizontalText: string;
+  selectedLanguage: string;
 
   disableBtn: boolean;
-  constructor(private splashScreen: SplashScreen, public apiService: ApiService) {
+  constructor(private splashScreen: SplashScreen, public apiService: ApiService, 
+              private translateConfigService: TranslateConfigService) {
     this.splashScreen.show();
     this.disableBtn = true;
     this.paises = [];
@@ -23,6 +26,11 @@ export class HomePage {
     });
     this.getAllCountries();
     this.horizontalText = this.getMarqueeText();
+    translateConfigService.setLanguage('en');
+  }
+
+  languageChanged(){
+    this.translateConfigService.setLanguage(this.selectedLanguage);
   }
 
   func(gend) {

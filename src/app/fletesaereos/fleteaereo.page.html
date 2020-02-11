@@ -4,7 +4,7 @@
             <ion-back-button defaultHref="/fletes"></ion-back-button>
         </ion-buttons>
         <ion-title>
-            Flete Aereo
+            {{ 'AIR.title' | translate }} 
         </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -15,26 +15,25 @@
             <div class="row-fluid">
                 <div class="col-xs-12 col-sm-12 col-md-12"><br>
                     <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px; text-align:center;">
-                        <strong>Solicitud de Cotización de Flete</strong></h4><br>
-                    <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>Datos de importador -
-                            exportador</strong></h4><br>
+                        <strong>{{ 'AIR.sub_title' | translate }} </strong></h4><br>
+                    <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>{{ 'AIR.shipper_info' | translate }}</strong></h4><br>
                     <ion-input name="id_cliente" value="1" type="hidden"></ion-input>
                     <ion-input name="servicio" value="air" type="hidden"></ion-input>
                     <ion-input name="opcion_metodo" value="1" type="hidden"></ion-input>
-                    <div class="col-xs-12 col-sm-4"><label>Empresa</label>
+                    <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.company' | translate }}</label>
                         <ion-input class="form-control" required="" ngModel name="empresa" type="text"></ion-input>
                     </div>
-                    <div class="col-xs-12 col-sm-4"><label>Contacto</label>
+                    <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.contact' | translate }}</label>
                         <ion-input class="form-control" required="" ngModel name="contacto" type="text"></ion-input>
                     </div>
-                    <div class="col-xs-12 col-sm-4"><label>Teléfono</label>
+                    <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.phone' | translate }}</label>
                         <ion-input class="form-control" ngModel name="tel" type="text" minlength="7" required="">
                         </ion-input>
                     </div>
-                    <div class="col-xs-12 col-sm-4"><label>Correo</label>
+                    <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.mail' | translate }}</label>
                         <ion-input class="form-control" required="" ngModel name="correo" type="email"></ion-input>
                     </div>
-                    <div class="col-xs-12 col-sm-4"><label>País de cotizacion</label>
+                    <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.country' | translate }}</label>
                         <ion-select placeholder="Seleccionar" class="form-control" ngModel name="pais"
                             required="required">
                             <ion-select-option value="Argentina">Argentina</ion-select-option>
@@ -78,17 +77,14 @@
 
                     <div class="row-fluid">
                         <div class="col-xs-12 col-sm-12 col-md-12"><br>
-                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>Datos de recepcion
-                                    de
-                                    la carga</strong></h4><br>
+                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>{{ 'AIR.cargo_recepcion' | translate }}</strong></h4><br>
 
-                            <div class="col-xs-12 col-sm-12 col-md-12"><label>Dirección recepcion (Calle, Barrio,
-                                    Distrito):
+                            <div class="col-xs-12 col-sm-12 col-md-12"><label>{{ 'AIR.address_recepcion' | translate }}
                                 </label>
                                 <ion-textarea rows="4" ngModel name="id_region_origen" class="form-control">
                                 </ion-textarea>
                             </div><br>
-                            <div class="col-xs-12 col-sm-4"><label>País Recepcion</label><ion-list>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.country_recepcion' | translate }}</label><ion-list>
                                 <ion-item>
                                   
                                   <ion-select placeholder="Seleccionar" class="form-control" ngModel name="id_pais_origen"
@@ -97,17 +93,17 @@
                                 </ion-select>
                                 </ion-item>   
                               </ion-list></div>
-                            <div class="col-xs-12 col-sm-4"><label>Ciudad Recepcion</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.city_recepcion' | translate }}</label>
                                 <ion-input class="form-control" required="" ngModel name="ciudad_orig" type="text">
                                 </ion-input>
                             </div>
-                            <div class="col-xs-12 col-sm-4"><label>Recepción</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.cbx_recepcion' | translate }}</label>
                                 <ion-select class="form-control" ngModel name="recepcion">
-                                    <ion-select-option value="Bodega / Warehouse">Bodega</ion-select-option>
-                                    <ion-select-option value="Aeropuerto / Airport">Aeropuerto</ion-select-option>
+                                    <ion-select-option value="Bodega / Warehouse">{{ 'AIR.warehouse' | translate }}</ion-select-option>
+                                    <ion-select-option value="Aeropuerto / Airport">{{ 'AIR.airport' | translate }}</ion-select-option>
                                 </ion-select>
                             </div>
-                            <div class="col-xs-12 col-sm-4"><label>Fecha Salida</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.departure_date' | translate }}</label>
                                 <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_salida" placeholder="Fecha Salida"></ion-datetime>
 
                             </div>
@@ -116,15 +112,12 @@
 
                     <div class="row-fluid">
                         <div class="col-xs-12 col-sm-12 col-md-12"><br>
-                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>Datos de
-                                    destino de
-                                    la carga</strong></h4><br>
-                            <div class="col-xs-12 col-sm-12 col-md-12"><label>Dirección Destino (Calle, Barrio,
-                                    Distrito):
+                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>{{ 'AIR.destination_info' | translate }}</strong></h4><br>
+                            <div class="col-xs-12 col-sm-12 col-md-12"><label>{{ 'AIR.destination_address' | translate }}
                                 </label><textarea rows="3" ngModel name="id_region_destino" class="form-control"
                                     required=""></textarea></div><br>
 
-                                    <div class="col-xs-12 col-sm-4"><label>País Destino</label><ion-list>
+                                    <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.country_destination' | translate }}</label><ion-list>
                                         <ion-item>
                                           
                                           <ion-select placeholder="Seleccionar" class="form-control" ngModel name="id_pais_dest"
@@ -133,19 +126,19 @@
                                          </ion-select>
                                         </ion-item>   
                                       </ion-list></div>
-                            <div class="col-xs-12 col-sm-4"><label>Lugar Destino</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.place_destination' | translate }}</label>
                                 <ion-input class="form-control" required="" ngModel name="ciudad_dest" type="text">
                                 </ion-input>
                             </div>
-                            <div class="col-xs-12 col-sm-4"><label>Fecha Llegada</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.arrival_date' | translate }}</label>
                                 <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_llegada" placeholder="Fecha Llegada"></ion-datetime> 
 
                             </div>
 
-                            <div class="col-xs-12 col-sm-4"><label>Entrega</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.cbx_delivery' | translate }}</label>
                                 <ion-select class="form-control" ngModel name="entrega">
-                                    <ion-select-option value="Bodega / Warehouse">Bodega</ion-select-option>
-                                    <ion-select-option value="Aeropuerto / Airport">Aeropuerto</ion-select-option>
+                                    <ion-select-option value="Bodega / Warehouse">{{ 'AIR.warehouse' | translate }}</ion-select-option>
+                                    <ion-select-option value="Aeropuerto / Airport">{{ 'AIR.airport' | translate }}</ion-select-option>
                                 </ion-select>
                             </div>
                         </div>
@@ -153,11 +146,10 @@
 
                     <div class="row-fluid">
                         <div class="col-xs-12 col-sm-12 col-md-12"><br>
-                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>Otros servicios
-                                    logísticos</strong></h4><br>
+                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>{{ 'AIR.logistic_services' | translate }}</strong></h4><br>
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
-                                        <ion-label>Seguro</ion-label>
+                                        <ion-label>{{ 'AIR.insurrance' | translate }}</ion-label>
                                         <ion-checkbox color="dark" ngModel name="serv_seguro" value="Seguro / Issurance">
                                         </ion-checkbox>
                                 </ion-item>
@@ -165,8 +157,7 @@
                             </label></div>
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
-                                        <ion-label> Bodega
-                                                Aduanera</ion-label>
+                                        <ion-label> {{ 'AIR.bonded_warehouse' | translate }}</ion-label>
                                         <ion-checkbox color="dark" ngModel name="serv_bonded" value="Bodega Aduanera / Bonded Warehouse">
                                                 </ion-checkbox>
                                 </ion-item>
@@ -174,7 +165,7 @@
                                 </label></div>
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
-                                        <ion-label>Corretaje de Aduanas</ion-label>
+                                        <ion-label>{{ 'AIR.customs_clearence' | translate }}</ion-label>
                                         <ion-checkbox color="dark" type="checkbox" ngModel name="serv_aduana" value="Corretaje de Aduanas / Customs Cleareance">
                                          </ion-checkbox>
                                 </ion-item>
@@ -182,7 +173,7 @@
                                 </label></div>
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
-                                        <ion-label>Transporte Terrestre</ion-label>
+                                        <ion-label>{{ 'AIR.land_transp' | translate }}</ion-label>
                                         <ion-checkbox color="dark" type="checkbox" ngModel name="serv_truck" value="Transporte Terrestre / Land Transportation">
                                         </ion-checkbox>
                                 </ion-item>
@@ -190,9 +181,7 @@
                                 </label></div>
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
-                                        <ion-label>Control
-                                                de
-                                                Temp</ion-label>
+                                        <ion-label>{{ 'AIR.temp_control' | translate }}</ion-label>
                                         <ion-checkbox color="dark" type="checkbox" ngModel name="serv_temp" value="Control de Temp / Controled Temp">
                                         </ion-checkbox>
                                 </ion-item>
@@ -200,8 +189,7 @@
                                 </label></div>
                             <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
                                 <ion-item>
-                                        <ion-label>Inspección
-                                                de Carga</ion-label>
+                                        <ion-label>{{ 'AIR.cargo_inspection' | translate }}</ion-label>
                                         <ion-checkbox color="dark" ngModel name="serv_insp" value="Inspección de Carga / Cargo Inspection">
                                         </ion-checkbox>
                                 </ion-item>
@@ -212,21 +200,20 @@
                     </div>
                     <div class="row-fluid">
                         <div class="col-xs-12 col-sm-12 col-md-12"><br>
-                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>Datos de la
-                                    Carga</strong></h4><br>
-                            <div class="col-xs-12 col-sm-4"><label>Cantidad (bultos)</label>
+                            <h4 style="background: #d6d6d6;padding: 9px 12px; margin-top: 30px;"><strong>{{ 'AIR.cargo_info' | translate }}</strong></h4><br>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.qty' | translate }}</label>
                                 <ion-input class="form-control" required="" ngModel name="cant_cont" min="1"
                                     type="number"></ion-input>
                             </div>
-                            <div class="col-xs-12 col-sm-4"><label>Peso (Kgs)</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.kg' | translate }}</label>
                                 <ion-input class="form-control" required="" ngModel name="peso_cont" step="0.1"
                                     min="0.0" type="number"></ion-input>
                             </div>
-                            <div class="col-xs-12 col-sm-4"><label>Pies Cúbicos</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.cubic' | translate }}</label>
                                 <ion-input class="form-control" required="" ngModel name="cubic" step="0.1" min="0.0"
                                      type="number"></ion-input>
                             </div>
-                            <div class="col-xs-12 col-sm-4"><label>Incoterm</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.incoterm' | translate }}</label>
                                 <ion-select class="form-control" ngModel name="service_cont">
                                     <ion-select-option value="EXW">EXW (ex-works)</ion-select-option>
                                     <ion-select-option value="FCA">FCA (free carrier)</ion-select-option>
@@ -245,7 +232,7 @@
                                     <ion-select-option value="DAP">DAP (delivered at place)</ion-select-option>
                                 </ion-select>
                             </div>
-                            <div class="col-xs-12 col-sm-4"><label>Tipo de mercancia</label>
+                            <div class="col-xs-12 col-sm-4"><label>{{ 'AIR.goods' | translate }}</label>
                                 <ion-input class="form-control" required="" ngModel name="goods" type="text"></ion-input>
                             </div>
 
@@ -253,12 +240,11 @@
                     </div>
                     <div class="row-fluid">
                         <div class="col-xs-12 col-sm-12 col-md-12"><br>
-                            <div><label>Instrucciones Especiales: </label>
+                            <div><label>{{ 'AIR.spinstructions' | translate }}</label>
                                 <ion-textarea rows="4" ngModel name="comentario" class="form-control"></ion-textarea>
                             </div> <br>
-                            <div><label>Adjuntar información adicional: </label>
-                                <div style="color:#e41717"> Nota: adjuntar listado individual de piezas o bultos con las
-                                    medidas de largo, ancho y profundidad y peso de cada una. </div>
+                            <div><label>{{ 'AIR.aditional_info' | translate }}</label>
+                                <div style="color:#e41717"> {{ 'AIR.note' | translate }} </div>
                                 <ion-input class="form-control" name="adjunto" id="adjunto" type="file"></ion-input>
                             </div>
                         </div>
@@ -269,7 +255,7 @@
         <br>
         <br>
         <div align="center">
-            <ion-button type="submit" class="primary" value="Enviar" style="width:40%;">Enviar</ion-button>
+            <ion-button type="submit" class="primary" value="Enviar" style="width:40%;">{{ 'AIR.send' | translate }}</ion-button>
         </div>
         <br>
     </form>

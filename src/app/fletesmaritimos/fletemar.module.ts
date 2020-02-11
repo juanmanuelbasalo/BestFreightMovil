@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { FletemarPage } from './fletemar.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { FletemarPage } from './fletemar.page';
         path: '',
         component: FletemarPage
       }
-    ])
+    ]),
+    TranslateModule.forChild(),
   ],
   declarations: [FletemarPage]
 })
