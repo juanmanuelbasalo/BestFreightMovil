@@ -70,7 +70,7 @@ async onSubmit(form: NgForm) {
   });
   const alert = await this.alertController.create({
     header: (this.language.includes('es')) ? 'Exito!' : 'Sent',
-    message: (this.language.includes('es')) ? 'Se envio su cotizacion con exito, verifique confirmación en su email.' : 'Verify your email for confirmation.',
+    message: (this.language.includes('es')) ? 'Enviado, verifique confirmación en su email.' : 'Verify your email for confirmation.',
     buttons: ['OK']
   });
   await alert.present();

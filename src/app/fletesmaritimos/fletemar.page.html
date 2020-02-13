@@ -91,7 +91,7 @@
                         <ion-list>
                             <ion-item>
                               
-                              <ion-select (ionChange)="checkCountry();" value="1" [(ngModel)]="reg" ngModel name="id_region_origen" okText="Okay" cancelText="Cancelar">
+                              <ion-select (ionChange)="checkCountry();" value="" [(ngModel)]="reg" ngModel name="id_region_origen" okText="Okay" cancelText="Cancelar">
                                 <ion-select-option *ngFor="let item of regions" value="{{item.id_region}}">{{item.region}}</ion-select-option>
                               </ion-select>
                             </ion-item>   
@@ -307,7 +307,7 @@
              <div class="row-fluid">
                         <div class="col-xs-12 col-sm-12 col-md-12"><br>
                             <div><label>{{ 'SEA.spinstructions' | translate }}</label><textarea rows="4" ngModel name="comentario" class="form-control"></textarea></div> <br>                                            
-                            <div><label>{{ 'SEA.aditional_info' | translate }} </label><div style="color:#e41717"> {{ 'SEA.note' | translate }} </div><input class="form-control" ngModel name="adjunto" id="adjunto" type="file"></div>
+                            <div><label>{{ 'SEA.aditional_info' | translate }} </label><div style="color:#e41717" *ngIf="myFlag === 1"> {{ 'SEA.note' | translate }} </div><div style="color:#e41717" *ngIf="myFlag != 1"> {{ 'SEA.note2' | translate }} </div><input class="form-control" ngModel name="adjunto" id="adjunto" type="file"></div>
                         </div>                                            
              </div>                   
     </div>

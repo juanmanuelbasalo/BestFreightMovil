@@ -46,11 +46,11 @@ public checks = [
     this.myFlag = myFlag;
     if (myFlag === 1) {
       this.type = 'terrestre_cont';
-      this.nombre = (this.language.includes('es')) ? 'Contenedor lleno - FCL' : 'Full Containern- FCL';
+      this.nombre = (this.language.includes('es')) ? 'Contenedor lleno - FCL' : 'Full Container- FCL';
     }
     if (myFlag === 2) {
       this.type = 'terrestre_suelta';
-      this.nombre = (this.language.includes('es')) ? 'Carga suelta - Mudanzas' : 'Loose cargo';
+      this.nombre = (this.language.includes('es')) ? 'Carga suelta - Mudanzas' : 'Loose Cargo-vehicles-others';
     }
   }
 
@@ -62,7 +62,7 @@ public checks = [
     });
     const alert = await this.alertController.create({
       header: (this.language.includes('es')) ? 'Exito!' : 'Sent',
-      message: (this.language.includes('es')) ? 'Se envio su cotizacion con exito, verifique confirmación en su email.' : 'Verify your email for confirmation.',
+      message: (this.language.includes('es')) ? 'Enviado, verifique confirmación en su email.' : 'Verify your email for confirmation.',
       buttons: ['OK']
     });
     await alert.present();
