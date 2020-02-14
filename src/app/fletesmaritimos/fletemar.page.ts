@@ -54,11 +54,11 @@ changeModule(myFlag: number) {
   }
   if (myFlag === 2) {
     this.type = 'carga_suelta';
-    this.nombre = (this.language.includes('es')) ? 'Carga Suelta-Mudanzas-Vehículos' : 'Loose cargo Effects-Vehicles';
+    this.nombre = (this.language.includes('es')) ? 'Carga Suelta-Mudanzas-Vehículos' : 'Loose Cargo-Vehicles-Others';
   }
   if (myFlag === 3) {
     this.type = 'carga_proyecto';
-    this.nombre = (this.language.includes('es')) ? 'Carga Suelta de Proyecto' : 'Project cargo';
+    this.nombre = (this.language.includes('es')) ? 'Carga Suelta de Proyecto' : 'Project Cargo';
   }
 }
 
@@ -69,8 +69,8 @@ async onSubmit(form: NgForm) {
     console.log(response);
   });
   const alert = await this.alertController.create({
-    header: (this.language.includes('es')) ? 'Exito!' : 'Sent',
-    message: (this.language.includes('es')) ? 'Enviado, verifique confirmación en su email.' : 'Verify your email for confirmation.',
+    header: (this.language.includes('es')) ? 'Enviado!' : 'Sent!',
+    message: (this.language.includes('es')) ? 'Verifique confirmación en su email.' : 'Verify your email for confirmation.',
     buttons: ['OK']
   });
   await alert.present();

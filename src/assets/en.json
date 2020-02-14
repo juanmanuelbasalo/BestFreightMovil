@@ -3,7 +3,7 @@
         "title": "BestFreightSearch",
         "select_country": "Select your country:",
         "Quotes": "Quotes:",
-        "find": "Find"
+        "find": "Search"
     },
     "MAIN": {
         "title": "The Best Freight Searcher",
@@ -11,9 +11,9 @@
         "air": "Air Freight",
         "land": "Land Freight",
         "quote": "quote",
-        "sea_text": "Here you will find the best sea freight for your cargo, click on the following button.",
-        "air_text": "Here you will find the best air freight for your cargo, click on the following button.",
-        "land_text": "Here you will find the best land freight for your cargo, click on the following button."
+        "sea_text": "Here you will find the best sea freight quotation for your cargo, click on the following button.",
+        "air_text": "Here you will find the best air freight quotation for your cargo, click on the following button.",
+        "land_text": "Here you will find the best land freight quotation for your cargo, click on the following button."
     },
     "AIR": {
         "title": "Air Freight",
@@ -53,13 +53,13 @@
         "goods": "Type of Goods",
         "spinstructions": "Special Instructions:",
         "aditional_info": "Attach more information:",
-        "note": "Note: Attach individual list of pieces or packages with the measures of length, width and depth and weight of each.",
+        "note": "Note: Attach the list of pieces / equipment / packages - with dimensions - length / width / height and weight.",
         "send": "Send"
     },
     "SEA": {
         "title1": "Full Container Load - FCL",
         "title2": "Loose Cargo-vehicles-others",
-        "title3": "Cargo Project",
+        "title3": "Project Cargo",
         "sub_title": "Request of Freight Quote",
         "shipper_info": "Info of the Shipper",
         "company": "Company",
@@ -67,7 +67,7 @@
         "phone": "Phone",
         "mail": "Email",
         "country": "Country of quotation",
-        "origen_recepcion": "Reception Region",
+        "origen_recepcion": "Region Of Reception",
         "address_recepcion": "Address of reception (Street, Neighborhood, District):",
         "country_recepcion": "Country of reception",
         "city_recepcion": "Place of reception",
@@ -100,7 +100,7 @@
         "spinstructions": "Special Instructions:",
         "aditional_info": "Attach more information:",
         "note": "Note: if there are two or more containers of different size please attach list with details",
-        "note2": "Nota: Attach the list of parts / equipment / packages - with dimensions - length / width / depth.",
+        "note2": "Note: Attach the list of pieces / equipment / packages - with dimensions - length / width / height and weight.",
         "send": "Send"
     },
     "LAND": {
@@ -118,11 +118,11 @@
         "country": "Country of quotation",
         "arrival_info": "Cargo reception info",
         "origin_recepcion": "Address of reception (Street, Neighborhood, District):",
-        "origen_recepcion": "Reception Region",
+        "origen_recepcion": "Region Of Reception",
         "address_recepcion": "Address of reception (Street, Neighborhood, District):",
         "address_destination": "Address of destination (Street, Neighborhood, District):",
         "country_recepcion": "Country of reception",
-        "city_recepcion": "Place of reception",
+        "city_recepcion": "City of reception",
         "cbx_recepcion": "Reception",
         "warehouse": "Warehouse",
         "port": "Port",
@@ -130,7 +130,7 @@
         "destination_info": "Cargo destination info",
         "region_destination": "Region of Destination",
         "country_destination": "Country of Destination",
-        "place_destination": "Place of destination",
+        "place_destination": "City of destination",
         "arrival_date": "Arrival Date",
         "cbx_delivery": "Delivery",
         "logistic_services": "Other logistics services",
@@ -151,7 +151,7 @@
         "spinstructions": "Special Instructions:",
         "aditional_info": "Attach more information:",
         "note": "Note: if there are two or more containers of different size please attach list with details",
-        "note2":"Note: Attach individual list of pieces or packages with the measures of length, width and depth and weight of each.",
+        "note2":"Note: Attach the list of pieces / equipment / packages - with dimensions - length / width / height and weight.",
         "send": "Send"
     }
 }
