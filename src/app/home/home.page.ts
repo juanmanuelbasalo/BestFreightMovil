@@ -57,6 +57,22 @@ export class HomePage {
      Custom Clearance -
      Cargo Inspection -
      Land Transport -
+     Bonded Warehouse - Sea Cargo Freight -
+     Air Cargo Freight -
+     Land Cargo Freight -
+     Sea Loose Cargo Freight -
+     Cargo Insurance -
+     Custom Clearance -
+     Cargo Inspection -
+     Land Transport -
+     Bonded Warehouse - Sea Cargo Freight -
+     Air Cargo Freight -
+     Land Cargo Freight -
+     Sea Loose Cargo Freight -
+     Cargo Insurance -
+     Custom Clearance -
+     Cargo Inspection -
+     Land Transport -
      Bonded Warehouse`;
   }
   private getMarqueeTextCountry() {

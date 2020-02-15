@@ -40,7 +40,7 @@
               type="text" minlength="7" required=""></div>
           <div class="col-xs-12 col-sm-4"><label>{{ 'LAND.mail' | translate }}</label><input class="form-control" required=""
               ngModel name="correo" type="email"></div>
-          <div class="col-xs-12 col-sm-4"><label>{{ 'LAND.country' | translate }}</label><ion-select placeholder="Seleccionar" class="form-control" ngModel name="pais"
+          <div class="col-xs-12 col-sm-4"><label>{{ 'LAND.country' | translate }}</label><ion-select class="form-control" ngModel name="pais"
             required="required">
             <ion-select-option value="Argentina">Argentina</ion-select-option>
             <ion-select-option value="Bélgica">Bélgica</ion-select-option>
@@ -90,7 +90,7 @@
               class="form-control"></textarea></div><br>
               <div class="col-xs-12 col-sm-4"><label>{{ 'LAND.country_recepcion' | translate }} </label><ion-list>
                 <ion-item>
-                  <ion-select placeholder="Seleccionar" class="form-control" ngModel name="id_pais_origen"
+                  <ion-select class="form-control" ngModel name="id_pais_origen"
                     required="required">
                     <ion-select-option *ngFor="let item of paises" value="{{item.id_pais}}">{{item.pais}}</ion-select-option>
                 </ion-select>
@@ -110,7 +110,7 @@
             </div>
             <div class="col-xs-12 col-sm-4"><ion-item>
               <ion-label>{{ 'LAND.departure_date' | translate }}</ion-label>
-              <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_salida" placeholder="Fecha Salida"></ion-datetime>
+              <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_salida"></ion-datetime>
             </ion-item></div>
         </div>
       </div>
@@ -124,7 +124,7 @@
 
               <div class="col-xs-12 col-sm-4"><label>{{ 'LAND.country_destination' | translate }}</label><ion-list>
                 <ion-item>
-                  <ion-select placeholder="Seleccionar" class="form-control" ngModel name="id_pais_dest"
+                  <ion-select class="form-control" ngModel name="id_pais_dest"
                     required="required">
                     <ion-select-option *ngFor="let item of paisesDestino" value="{{item.id_pais}}">{{item.pais}}</ion-select-option>
                  </ion-select>
@@ -133,7 +133,7 @@
           <div class="col-xs-12 col-sm-4"><label>{{ 'LAND.place_destination' | translate }}</label><input class="form-control"
               required="" ngModel name="ciudad_dest" type="text"></div>
           <div class="col-xs-12 col-sm-4"><label>{{ 'LAND.arrival_date' | translate }}</label>
-              <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_llegada" placeholder="Fecha Llegada"></ion-datetime> </div>
+              <ion-datetime displayFormat="DD MM YYYY" ngModel name="fecha_llegada"></ion-datetime> </div>
 
           <div class="col-xs-12 col-sm-4">
             <ion-list>
@@ -155,7 +155,7 @@
           <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
               <ion-item>
                       <ion-label>{{ 'LAND.insurrance' | translate }}</ion-label>
-                      <ion-checkbox color="dark" [(ngModel)]="checks[0].isChecked" name="serv_seguro" value="Inssurance">
+                      <ion-checkbox style="margin-left: 1rem;" color="dark" [(ngModel)]="checks[0].isChecked" name="serv_seguro" value="Inssurance">
                       </ion-checkbox>
               </ion-item>
                  
@@ -163,7 +163,7 @@
           <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
               <ion-item>
                       <ion-label> {{ 'LAND.bonded_warehouse' | translate }}</ion-label>
-                      <ion-checkbox color="dark" [(ngModel)]="checks[1].isChecked"  name="serv_bonded" value="Bonded Warehouse">
+                      <ion-checkbox style="margin-left: 1rem;" color="dark" [(ngModel)]="checks[1].isChecked"  name="serv_bonded" value="Bonded Warehouse">
                               </ion-checkbox>
               </ion-item>
                  
@@ -171,7 +171,7 @@
           <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
               <ion-item>
                       <ion-label>{{ 'LAND.customs_clearence' | translate }}</ion-label>
-                      <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[2].isChecked"  name="serv_aduana" value="Customs Cleareance">
+                      <ion-checkbox style="margin-left: 1rem;" color="dark" type="checkbox" [(ngModel)]="checks[2].isChecked"  name="serv_aduana" value="Customs Cleareance">
                        </ion-checkbox>
               </ion-item>
                   
@@ -179,7 +179,7 @@
           <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
               <ion-item>
                       <ion-label>{{ 'LAND.land_transp' | translate }}</ion-label>
-                      <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[3].isChecked"  name="serv_truck" value="Land Transportation">
+                      <ion-checkbox style="margin-left: 1rem;" color="dark" type="checkbox" [(ngModel)]="checks[3].isChecked"  name="serv_truck" value="Land Transportation">
                       </ion-checkbox>
               </ion-item>
                  
@@ -187,7 +187,7 @@
           <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
               <ion-item>
                       <ion-label>{{ 'LAND.temp_control' | translate }}</ion-label>
-                      <ion-checkbox color="dark" type="checkbox" [(ngModel)]="checks[4].isChecked"  name="serv_temp" value="Controled Temp">
+                      <ion-checkbox style="margin-left: 1rem;" color="dark" type="checkbox" [(ngModel)]="checks[4].isChecked"  name="serv_temp" value="Controled Temp">
                       </ion-checkbox>
               </ion-item>
                  
@@ -195,7 +195,7 @@
           <div class="col-xs-12 col-sm-4"><label class="checkbox-inline">
               <ion-item>
                       <ion-label>{{ 'LAND.cargo_inspection' | translate }}</ion-label>
-                      <ion-checkbox color="dark" [(ngModel)]="checks[5].isChecked"  name="serv_insp" value="Cargo Inspection">
+                      <ion-checkbox style="margin-left: 1rem;" color="dark" [(ngModel)]="checks[5].isChecked"  name="serv_insp" value="Cargo Inspection">
                       </ion-checkbox>
               </ion-item>
                  
