@@ -44,7 +44,28 @@
     display: inline-block;
     padding-left: 100%;
     /* show the marquee just outside the paragraph */
-    animation: marquee 30s linear infinite;
+    animation: marquee 20s linear infinite;
+    color: white;
+  }
+
+  .marquee2 {
+    width: 450px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right,#2196F3,#303F9F);
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  }
+  
+  .marquee2 span {
+    display: inline-block;
+    padding-left: 100%;
+    /* show the marquee just outside the paragraph */
+    animation: marquee2 30s linear infinite;
     color: white;
   }
   
@@ -58,3 +79,11 @@
       transform: translate(-100%, 0);
     }
   }  
+  @keyframes marquee2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-10%, 0);
+    }
+  } 

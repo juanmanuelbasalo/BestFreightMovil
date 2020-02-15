@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.acimutstudios.freightsearcher" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.acimutstudios.freightsearcher" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>BFSearcher</name>
     <description>El mejor buscador de flete del mercado.</description>
     <author email="jb_2896@hotmail.com" href="http://ionicframework.com/">Juan Basalo</author>
