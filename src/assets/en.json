@@ -11,9 +11,9 @@
         "air": "Air Freight",
         "land": "Land Freight",
         "quote": "quote",
-        "sea_text": "Here you will find the best sea freight quotation for your cargo, click on the following button.",
-        "air_text": "Here you will find the best air freight quotation for your cargo, click on the following button.",
-        "land_text": "Here you will find the best land freight quotation for your cargo, click on the following button."
+        "sea_text": "Here you will find many and more of the best sea freight quotations for your cargo, just click on the below button",
+        "air_text": "Here you will find many and more of the best air freight quotations for your cargo, just click on the below button",
+        "land_text": "Here you will find many and more of the best land freight quotations for your cargo, just click on the below button"
     },
     "AIR": {
         "title": "Air Freight",
@@ -67,7 +67,7 @@
         "phone": "Phone",
         "mail": "Email",
         "country": "Country of quotation",
-        "origen_recepcion": "Region Of Reception",
+        "origen_recepcion": "Region of Reception",
         "address_recepcion": "Address of reception (Street, Neighborhood, District):",
         "country_recepcion": "Country of reception",
         "city_recepcion": "Place of reception",
@@ -118,7 +118,7 @@
         "country": "Country of quotation",
         "arrival_info": "Cargo reception info",
         "origin_recepcion": "Address of reception (Street, Neighborhood, District):",
-        "origen_recepcion": "Region Of Reception",
+        "origen_recepcion": "Region of Reception",
         "address_recepcion": "Address of reception (Street, Neighborhood, District):",
         "address_destination": "Address of destination (Street, Neighborhood, District):",
         "country_recepcion": "Country of reception",

@@ -53,7 +53,7 @@
         "goods": "Tipo de mercancia",
         "spinstructions": "Instrucciones Especiales:",
         "aditional_info": "Adjuntar información adicional:",
-        "note": "Nota: adjuntar listado individual de piezas o bultos con las medidas de largo, ancho y profundidad y peso de cada una.",
+        "note": "Nota: adjuntar listado individual de piezas o bultos con las medidas de largo, ancho, alto y peso de cada una.",
         "send": "Enviar"
     },
     "SEA": {
@@ -101,7 +101,7 @@
         "spinstructions": "Instrucciones Especiales:",
         "aditional_info": "Adjuntar información adicional:",
         "note": "Nota: Si son 2 o más contenedores de diferente tipo (ejemplo: uno de 20 y uno de 40) debe adjuntar un archivo con los detalles.",
-        "note2": "Nota: adjuntar el listado de piezas / equipos / bultos - con dimensiones - largo/ancho/profundidad.",
+        "note2": "Nota: adjuntar el listado de piezas / equipos / bultos - con dimensiones - largo/ancho/alto y peso de cada una.",
         "send": "Enviar"
     },
     "LAND": {
@@ -152,7 +152,7 @@
         "spinstructions": "Instrucciones Especiales:",
         "aditional_info": "Adjuntar información adicional:",
         "note": "Nota: Si son 2 o más contenedores de diferente tipo (ejemplo: uno de 20 y uno de 40) debe adjuntar un archivo con los detalles.",
-        "note2": "Nota: adjuntar listado individual de piezas o bultos con las medidas de largo, ancho y profundidad y peso de cada una.",
+        "note2": "Nota: adjuntar listado individual de piezas o bultos con las medidas de largo, ancho, alto y peso de cada una.",
         "send": "Enviar"
     }
 }
