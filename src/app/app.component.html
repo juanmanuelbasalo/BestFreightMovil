@@ -1,3 +1,34 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu color="white" side="start" menuId="m1">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>
+          {{ 'HOME.title' | translate }} 
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="/fletemar">
+            <ion-icon name="boat" slot="start"></ion-icon>
+            <ion-label>{{ 'MAIN.sea' | translate }}</ion-label>
+          </ion-item>
+          <ion-item routerLink="/fleteaereo">
+            <ion-icon name="plane" slot="start"></ion-icon>
+            <ion-label>{{ 'MAIN.air' | translate }}</ion-label>
+          </ion-item>
+          <ion-item routerLink="/fletesterrestre">
+            <ion-icon name="train" slot="start"></ion-icon>
+            <ion-label>{{ 'MAIN.land' | translate }}</ion-label>
+          </ion-item>
+          <ion-item routerLink="/">
+            <ion-icon name="exit" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>
