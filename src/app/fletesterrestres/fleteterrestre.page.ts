@@ -67,7 +67,9 @@ public checks = [
     });
     await alert.present();
   }
+  onImagePicked(imageData: string) {
 
+  }
   checkCountry() {
     this.paises.length = 0;
     this.getAllCountries();

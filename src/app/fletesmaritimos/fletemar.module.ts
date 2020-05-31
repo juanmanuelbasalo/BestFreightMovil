@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { FletemarPage } from './fletemar.page';
 import { TranslateModule } from '@ngx-translate/core';
+import { ImagePickerModule } from '../image-picker/image-picker.module';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { TranslateModule } from '@ngx-translate/core';
       }
     ]),
     TranslateModule.forChild(),
+    ImagePickerModule,
   ],
   declarations: [FletemarPage]
 })

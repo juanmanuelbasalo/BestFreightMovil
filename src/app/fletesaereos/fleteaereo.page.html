@@ -247,7 +247,7 @@
                             </div> <br>
                             <div><label>{{ 'AIR.aditional_info' | translate }}</label>
                                 <div style="color:#e41717"> {{ 'AIR.note' | translate }} </div>
-                                <ion-input class="form-control" name="adjunto" id="adjunto" type="file"></ion-input>
+                                <app-image-picker (imagePick)="onImagePicked($event)"></app-image-picker>
                             </div>
                         </div>
                     </div>

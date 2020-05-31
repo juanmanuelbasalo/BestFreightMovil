@@ -72,6 +72,9 @@ getAllCountries() {
   });
 }
 
+onImagePicked(imageData: string) {
+
+}
 
 getAllCountriesDestino() {
   this.apiService.getListCountriesByRegion().subscribe(response => { 

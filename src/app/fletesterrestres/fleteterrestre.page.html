@@ -302,7 +302,7 @@
                                 <div class="row-fluid">
                                   <div class="col-xs-12 col-sm-12 col-md-12"><br>
                                       <div><label>{{ 'LAND.spinstructions' | translate }} </label><textarea rows="4" ngModel name="comentario" class="form-control"></textarea></div> <br>                                            
-                                      <div><label>{{ 'LAND.aditional_info' | translate }}</label><div style="color:#e41717" *ngIf="myFlag === 1"> {{ 'LAND.note' | translate }}</div><div style="color:#e41717" *ngIf="myFlag === 2"> {{ 'LAND.note2' | translate }}</div> <input class="form-control" ngModel name="adjunto" id="adjunto" type="file"></div>
+                                      <div><label>{{ 'LAND.aditional_info' | translate }}</label><div style="color:#e41717" *ngIf="myFlag === 1"> {{ 'LAND.note' | translate }}</div><div style="color:#e41717" *ngIf="myFlag === 2"> {{ 'LAND.note2' | translate }}</div><app-image-picker (imagePick)="onImagePicked($event)"></app-image-picker></div>
                                   </div>                                            
                        </div>
       </div>
